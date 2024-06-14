@@ -7,11 +7,11 @@ with open("README.md", "r", encoding="utf-8") as file:
 # version.py defines the VERSION and VERSION_SHORT variables.
 # We use exec here so we don't import cached_path whilst setting up.
 VERSION = {}  # type: ignore
-with open("tiktok_hashtag_analysis/version.py", "r") as version_file:
+with open("tiktokusers_analysis/version.py", "r") as version_file:
     exec(version_file.read(), VERSION)
 
 setup(
-    name="tiktok-hashtag-analysis",
+    name="tiktok-users-analysis",
     version=VERSION["VERSION"],
     author="Bellingcat",
     author_email="tech@bellingcat.com",
@@ -19,7 +19,7 @@ setup(
     description="Analyze hashtags within posts scraped from TikTok",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/bellingcat/tiktok-hashtag-analysis",
+    url="https://github.com/bellingcat/tiktok-users-analysis",
     license="MIT License",
     install_requires=[
         "seaborn",
